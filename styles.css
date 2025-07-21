@@ -52,7 +52,7 @@ body {
     line-height: var(--line-height-body);
     color: var(--text-color);
     background: var(--background); 
-    transition: background 0.5s ease, color 0.5s ease; /* Smooth transition for background and text color */
+    transition: background 0.5s ease, color 0.5s ease;
 }
 
 /* Navigation */
@@ -62,24 +62,21 @@ body {
     left: 0;
     width: 100%;
     background: var(--card-bg); 
-    backdrop-filter: none; 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); 
     z-index: 1000;
-    transition: all 0.3s ease-in-out, background 0.5s ease, box-shadow 0.5s ease; /* Add transitions for theme changes */
-    border-radius: 0; 
+    transition: all 0.3s ease-in-out, background 0.5s ease, box-shadow 0.5s ease;
     border-bottom: 1px solid var(--divider-color); 
 }
 
 .navbar.scrolled {
-    top: 0; /* Keep it at top */
-    width: 100%; /* Keep it full width */
-    border-radius: 0; /* Keep it no rounded corners */
+    top: 0;
+    width: 100%;
 }
 
 .nav-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0.6rem 2rem; /* Adjusted padding to make navbar smaller */
+    padding: 0.6rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -87,18 +84,17 @@ body {
 
 .logo {
     font-family: var(--header-font); 
-    font-size: 1.3rem; /* Made smaller */
+    font-size: 1.3rem;
     font-weight: var(--font-weight-bold); 
     color: var(--text-color); 
     letter-spacing: 0.05em; 
-    font-style: normal; 
-    line-height: 1.1; /* Adjusted line height for two lines */
+    line-height: 1.1;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 1.2rem; /* Reduced gap */
+    gap: 1.2rem;
 }
 
 .nav-links a {
@@ -106,17 +102,15 @@ body {
     color: var(--text-color);
     font-weight: var(--font-weight-medium);
     transition: all 0.3s ease;
-    padding: 0.2rem 0.5rem; /* Adjusted padding */
-    border-radius: 0.3rem; /* Slightly smaller border-radius */
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
 }
 
 .nav-links a:hover {
     color: var(--primary-color);
     background: rgba(230, 57, 70, 0.1);
     transform: translateY(-1px);
-    box-shadow: none;
 }
-
 
 a[href^="mailto:"] {
     pointer-events: auto;
@@ -131,7 +125,6 @@ a[href^="mailto:"] {
     z-index: 10 !important;
 }
 
-
 .contact-message .btn {
     pointer-events: auto;
     z-index: 10;
@@ -139,62 +132,60 @@ a[href^="mailto:"] {
 
 .social-icons {
     display: flex;
-    gap: 0.8rem; /* Space between icons */
+    gap: 0.8rem;
     align-items: center;
 }
 
 .social-icon {
-    font-size: 1.1rem; /* Slightly smaller icons */
+    font-size: 1.1rem;
     color: var(--text-color);
     transition: color 0.3s ease, transform 0.3s ease;
-    padding: 0.3rem; /* Add padding for clickable area */
-    border-radius: 50%; /* Make them circular */
+    padding: 0.3rem;
+    border-radius: 50%;
 }
 
 .social-icon:hover {
     color: var(--primary-color);
     transform: translateY(-2px);
-    background-color: rgba(230, 57, 70, 0.08); /* Subtle background on hover */
+    background-color: rgba(230, 57, 70, 0.08);
 }
 
 .theme-toggle-button {
     background: none;
     border: none;
     color: var(--text-color);
-    font-size: 1.1rem; /* Slightly smaller toggle icon */
+    font-size: 1.1rem;
     cursor: pointer;
     transition: color 0.3s ease, transform 0.3s ease;
-    margin-left: 0.5rem; /* Space from other icons */
-    padding: 0.3rem; /* Add padding for clickable area */
-    border-radius: 50%; /* Make it circular */
+    margin-left: 0.5rem;
+    padding: 0.3rem;
+    border-radius: 50%;
 }
 
 .theme-toggle-button:hover {
     color: var(--primary-color);
     transform: translateY(-2px);
-    background-color: rgba(230, 57, 70, 0.08); /* Subtle background on hover */
+    background-color: rgba(230, 57, 70, 0.08);
 }
 
 /* Sections */
 .section {
-    padding: 6rem 2rem; /* Adjusted padding to be less extreme for lighter theme */
+    padding: 6rem 2rem;
     min-height: 100vh;
     display: flex;
     align-items: center;
     background: var(--background); 
-    transition: background 0.5s ease; /* Smooth transition for background */
+    transition: background 0.5s ease;
 }
 
-/* Ensure all links within relevant sections are clickable */
 #home a,
 #projects a,
 #contact a {
-    position: relative; /* Needs position for z-index to work */
-    z-index: 9999; /* Very high to ensure clickability */
-    cursor: pointer; /* Ensure cursor indicates clickability */
+    position: relative;
+    z-index: 9999;
+    cursor: pointer;
 }
 
-/* Elements that will animate in */
 .section-content-to-animate {
     opacity: 0;
     transform: translateY(50px);
@@ -210,16 +201,15 @@ a[href^="mailto:"] {
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
-    text-align: left; /* Ensure the container itself doesn't force center alignment */
+    text-align: left;
 }
 
 .section-title {
     font-family: var(--header-font);
-    font-size: 2.8rem; /* Slightly smaller for light theme */
+    font-size: 2.8rem;
     margin-bottom: 3rem;
-    text-align: left; /* Changed from center to left */
-    color: var(--primary-color); /* Red title */
-    text-shadow: none; /* Remove text shadow */
+    text-align: left;
+    color: var(--primary-color);
 }
 
 /* Home Section */
@@ -228,21 +218,20 @@ a[href^="mailto:"] {
     text-align: left;
     position: relative;
     overflow: hidden;
-    padding-top: 8rem; /* Adjusted for fixed navbar */
+    padding-top: 8rem;
 }
 
 #home .container {
     max-width: 600px; 
-    margin: 0 auto; /* Changed from margin-left: 0; margin-right: auto; to center the container */
+    margin: 0 auto;
 }
 
 #home h1 {
     font-family: var(--header-font);
-    font-size: 4rem; /* Adjusted for light theme */
+    font-size: 4rem;
     margin-bottom: 0.2rem;
-    color: var(--text-color); /* Dark text for headings */
-    text-shadow: none; /* Remove text shadow */
-    line-height: 1.1; /* Tighter line height */
+    color: var(--text-color);
+    line-height: 1.1;
     opacity: 0;
     transform: translateY(20px);
     animation: slideIn 1s ease-out forwards 0.5s;
@@ -253,7 +242,7 @@ a[href^="mailto:"] {
     vertical-align: middle;
     width: 3px;
     height: 1em;
-    background-color: var(--primary-color); /* Red cursor */
+    background-color: var(--primary-color);
     margin-left: 5px;
     animation: blink-caret 0.75s step-end infinite;
 }
@@ -269,7 +258,7 @@ a[href^="mailto:"] {
 
 #home h2 {
     font-family: var(--header-font);
-    font-size: 1.6rem; /* Adjusted for light theme */
+    font-size: 1.6rem;
     color: var(--light-text);
     margin-bottom: 0.3rem;
     line-height: var(--line-height-heading);
@@ -279,20 +268,19 @@ a[href^="mailto:"] {
 }
 
 #home p {
-    font-size: 1rem; /* Slightly smaller for light theme */
+    font-size: 1rem;
     color: var(--text-color);
-    margin-bottom: 0.8rem; /* More space for readability */
-    line-height: 1.5; /* Increased line height for readability */
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
     opacity: 0;
     transform: translateY(20px);
     animation: slideIn 1s ease-out forwards 1.1s;
 }
 
 .highlight {
-    color: var(--primary-color); /* Red highlight */
+    color: var(--primary-color);
 }
 
-/* Keyframe Animations */
 @keyframes slideIn {
     to {
         opacity: 1;
@@ -313,32 +301,32 @@ a[href^="mailto:"] {
 .btn {
     display: inline-flex;
     align-items: center;
-    padding: 0.9rem 2rem; /* Larger padding for a softer button */
-    border-radius: 2rem; /* Fully rounded corners */
+    padding: 0.9rem 2rem;
+    border-radius: 2rem;
     text-decoration: none;
     font-weight: var(--font-weight-semibold);
     transition: all 0.3s ease;
     margin: 1.5rem 0 0 0;
-    letter-spacing: 0.02em; /* Slightly tighter letter spacing */
-    font-size: 1rem; /* Slightly larger font */
+    letter-spacing: 0.02em;
+    font-size: 1rem;
 }
 
 .btn i {
-    margin-right: 0.8rem; /* More space for icon */
+    margin-right: 0.8rem;
 }
 
 .btn.primary {
-    background: var(--primary-color); /* Red solid button */
-    color: var(--card-bg); /* White text */
+    background: var(--primary-color);
+    color: var(--card-bg);
     border: none;
-    box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4); /* Red shadow */
+    box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4);
 }
 
 .btn.primary:hover {
-    background: var(--button-primary-hover-bg); /* Darker red on hover */
+    background: var(--button-primary-hover-bg);
     color: var(--card-bg);
-    box-shadow: 0 6px 20px rgba(230, 57, 70, 0.6); /* Stronger red shadow */
-    transform: translateY(-2px) scale(1.02); /* Subtle lift */
+    box-shadow: 0 6px 20px rgba(230, 57, 70, 0.6);
+    transform: translateY(-2px) scale(1.02);
 }
 
 .btn.secondary {
@@ -349,10 +337,10 @@ a[href^="mailto:"] {
 }
 
 .btn.secondary:hover {
-    background: rgba(230, 57, 70, 0.1); /* Light red background on hover */
+    background: rgba(230, 57, 70, 0.1);
     color: var(--primary-color);
     transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 2px 8px rgba(230, 57, 70, 0.2); /* Subtle red shadow */
+    box-shadow: 0 2px 8px rgba(230, 57, 70, 0.2);
 }
 
 .btn.small {
@@ -364,7 +352,7 @@ a[href^="mailto:"] {
 .about-content {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem; /* Increased gap */
+    gap: 2.5rem;
     align-items: center;
     opacity: 0;
     transform: translateY(50px);
@@ -385,25 +373,25 @@ a[href^="mailto:"] {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.2rem; /* Slightly smaller gap */
+    gap: 1.2rem;
     margin-top: 1.5rem;
 }
 
 .skills-in-about li {
     font-family: var(--body-font); 
-    background: var(--divider-color); /* Lighter background for tags */
-    padding: 0.6rem 1.1rem; /* Adjusted padding */
-    border-radius: 0.4rem; /* Softly rounded */
-    color: var(--text-color); /* Darker text for tags */
+    background: var(--divider-color);
+    padding: 0.6rem 1.1rem;
+    border-radius: 0.4rem;
+    color: var(--text-color);
     font-weight: var(--font-weight-medium);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 
 .skills-in-about li:hover {
-    transform: translateY(-2px); /* Subtle lift */
-    background: var(--primary-color); /* Red background on hover */
-    color: var(--card-bg); /* White text on hover */
+    transform: translateY(-2px);
+    background: var(--primary-color);
+    color: var(--card-bg);
 }
 
 .about-image {
@@ -412,8 +400,8 @@ a[href^="mailto:"] {
     height: 280px;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Softer shadow */
-    border: 3px solid var(--primary-color); /* Red border */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    border: 3px solid var(--primary-color);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -443,16 +431,16 @@ a[href^="mailto:"] {
     }
 }
 
-/* Experience section styling */
+/* Experience section */
 .experience-content {
     display: flex;
     gap: 2.5rem;
     min-height: 60vh;
-    background: var(--card-bg); /* Light background for experience card */
+    background: var(--card-bg);
     border-radius: 1rem;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
     padding: 2.5rem;
-    transition: background 0.3s ease, box-shadow 0.3s ease; /* Keep other transitions */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -461,15 +449,15 @@ a[href^="mailto:"] {
 .experience-companies {
     font-family: var(--body-font); 
     flex: 0 0 220px;
-    border-right: 1px solid var(--divider-color); /* Lighter divider */
+    border-right: 1px solid var(--divider-color);
     padding-right: 2.5rem;
-    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    transition: border-color 0.3s ease;
 }
 
 .company-item {
     padding: 0.8rem 0;
-    font-size: 1.15rem; /* Slightly smaller */
-    color: var(--text-color); /* Dark text */
+    font-size: 1.15rem;
+    color: var(--text-color);
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
@@ -481,12 +469,12 @@ a[href^="mailto:"] {
 }
 
 .company-item:hover {
-    color: var(--primary-color); /* Red on hover */
-    transform: translateX(3px); /* Subtle shift */
+    color: var(--primary-color);
+    transform: translateX(3px);
 }
 
 .company-item.active {
-    color: var(--primary-color); /* Red for active */
+    color: var(--primary-color);
     font-weight: var(--font-weight-semibold);
 }
 
@@ -498,9 +486,9 @@ a[href^="mailto:"] {
     transform: translateY(-50%);
     width: 4px;
     height: 100%;
-    background: var(--primary-color); /* Red indicator */
+    background: var(--primary-color);
     border-radius: 2px;
-    transition: background 0.3s ease; /* Smooth transition for background */
+    transition: background 0.3s ease;
 }
 
 .experience-details {
@@ -527,17 +515,16 @@ a[href^="mailto:"] {
 
 .job-details h3 {
     font-family: var(--header-font); 
-    font-size: 1.7rem; /* Adjusted size */
+    font-size: 1.7rem;
     margin-bottom: 0.5rem;
-    color: var(--text-color); /* Dark text */
-    text-shadow: none;
+    color: var(--text-color);
 }
 
 .job-duration {
     font-family: var(--body-font); 
-    color: var(--light-text); /* Muted text */
-    font-size: 0.95rem; /* Slightly smaller */
-    margin-bottom: 1.2rem; /* Adjusted spacing */
+    color: var(--light-text);
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
     font-weight: var(--font-weight-regular);
 }
 
@@ -549,15 +536,15 @@ a[href^="mailto:"] {
 .job-details ul li {
     font-family: var(--body-font); 
     position: relative;
-    margin-bottom: 0.7rem; /* Tighter spacing */
-    padding-left: 1.5rem; /* Adjusted padding */
-    color: var(--text-color); /* Dark text */
-    font-size: 1rem; /* Adjusted size */
+    margin-bottom: 0.7rem;
+    padding-left: 1.5rem;
+    color: var(--text-color);
+    font-size: 1rem;
 }
 
 .job-details ul li::before {
     content: '\25B8';
-    color: var(--primary-color); /* Red bullet */
+    color: var(--primary-color);
     position: absolute;
     left: 0;
     font-size: 0.9em;
@@ -577,36 +564,32 @@ a[href^="mailto:"] {
 .project-card {
     background: var(--card-bg);
     border-radius: 1rem;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 1.8rem; 
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
     min-height: 280px; 
-    position: relative; /* Crucial for positioning child elements absolutely */
+    position: relative;
 }
 
 .project-card:hover {
-    transform: translateY(-5px) scale(1.01); /* Softer hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Softer shadow on hover */
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .project-header-icons {
-    position: absolute; /* Position relative to the project-card */
-    top: 1.5rem; /* Adjust as needed for spacing from top */
-    right: 1.5rem; /* Adjust as needed for spacing from right */
-    z-index: 1; /* Ensure it's above other card content */
-    display: flex; /* Keep flex to center the icon within its own space if needed */
-    justify-content: flex-end; /* Push the icon to the right within its absolute container */
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
-    width: auto; /* Allow content to define width */
-    height: auto; /* Allow content to define height */
-    margin-bottom: 0; /* Remove previous margin */
-}
-
-.project-folder-icon {
-    display: none; /* Keep hidden as per previous instruction */
+    width: auto;
+    height: auto;
+    margin-bottom: 0;
 }
 
 .project-github-icon {
@@ -617,11 +600,7 @@ a[href^="mailto:"] {
 
 .project-github-icon:hover {
     color: var(--primary-color);
-    transform: none; 
-    background-color: transparent; 
 }
-
-/* No .project-image styling needed */
 
 .project-info {
     padding: 0; 
@@ -634,15 +613,15 @@ a[href^="mailto:"] {
 .project-info h3 {
     font-family: var(--header-font); 
     color: var(--text-color); 
-    font-size: 1.2rem; /* Slightly smaller for light theme */
-    margin-bottom: 0.4rem; /* Tighter spacing */
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
     line-height: 1.3; 
 }
 
 .project-info p {
     font-family: var(--body-font); 
     color: var(--light-text); 
-    font-size: 0.9rem; /* Smaller description text */
+    font-size: 0.9rem;
     margin-bottom: 1rem; 
     flex-grow: 1; 
 }
@@ -652,32 +631,25 @@ a[href^="mailto:"] {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.6rem; /* Tighter gap */
+    gap: 0.6rem;
     margin-top: auto; 
 }
 
 .project-technologies li {
     font-family: var(--code-font); 
     font-size: 0.75rem; 
-    background: rgba(255, 240, 240, 0.8); /* Very light, subtle pinkish-white background */
-    color: var(--text-color); /* Dark gray text color */
+    background: rgba(255, 240, 240, 0.8);
+    color: var(--text-color);
     padding: 0.2rem 0.5rem;
-    border-radius: 0.4rem; /* Slightly more rounded corners */
+    border-radius: 0.4rem;
     white-space: nowrap;
 }
-
-/* No .project-links styling needed */
 
 /* Contact Section */
 .contact-content {
     display: grid;
-    grid-template-columns: 1.2fr 2fr;
+    grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    background: var(--card-bg); /* Light background */
-    padding: 3rem;
-    border-radius: 1rem;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* Softer shadow */
-    transition: background 0.3s ease, box-shadow 0.3s ease;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -686,67 +658,107 @@ a[href^="mailto:"] {
 .contact-info {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem; /* Tighter gap */
+    gap: 1.5rem;
 }
 
 .contact-item {
     display: flex;
     align-items: center;
-    gap: 1rem; /* Tighter gap */
+    gap: 1rem;
     color: var(--text-color);
     position: relative;
-    z-index: 2; 
+    z-index: 2;
 }
 
 .contact-item i {
-    font-size: 1.6rem; /* Slightly smaller icon */
+    font-size: 1.6rem;
     color: var(--primary-color);
 }
 
-.contact-item p {
-    font-family: var(--body-font); 
-    color: var(--text-color); 
-    font-size: 1rem; /* Slightly smaller */
-}
-
 .contact-item a {
-    display: block; 
-    color: var(--text-color); /* Dark text */
+    display: block;
+    color: var(--text-color);
     text-decoration: none;
     cursor: pointer;
-    pointer-events: auto; 
 }
 
-.contact-message {
+/* Contact Form Styles */
+.contact-form-container {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.contact-form-container h3 {
+    font-family: var(--header-font);
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.contact-form-container p {
+    color: var(--light-text);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.contact-form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 1.5rem;
+    gap: 1.2rem;
 }
 
-.contact-message p {
-    font-family: var(--body-font); 
-    font-size: 1.05rem; /* Slightly smaller */
-    color: var(--text-color); 
-    max-width: 500px;
+.form-group {
+    display: flex;
+    flex-direction: column;
 }
 
-.contact-message .btn {
+.form-group input,
+.form-group textarea {
+    padding: 0.8rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--divider-color);
+    background: var(--background);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-success-message {
+    background: rgba(100, 255, 218, 0.1);
+    color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
     margin-top: 1rem;
-    cursor: pointer;
-    pointer-events: auto; 
+    text-align: center;
+    border: 1px solid var(--primary-color);
+    display: none;
 }
 
 /* Footer */
 footer {
-    background: var(--background); /* Changed to match main page background */
+    background: var(--background);
     color: var(--light-text); 
     padding: 2rem; 
     text-align: center;
     font-size: 0.9rem; 
-    border-top: none; /* Removed the top border */
+    border-top: none;
     transition: background 0.3s ease, border-color 0.3s ease;
 }
 
@@ -761,7 +773,7 @@ footer p {
     }
     
     #home h1 {
-        font-size: 2.5rem; /* Adjusted for smaller screens */
+        font-size: 2.5rem;
     }
     
     #home h2 {
@@ -769,18 +781,16 @@ footer p {
     }
     
     .section {
-        padding: 3rem 1rem; /* Adjusted padding */
+        padding: 3rem 1rem;
     }
 
     .contact-content {
         grid-template-columns: 1fr;
-        padding: 1.5rem; /* Adjusted padding */
-        gap: 1.5rem;
+        gap: 2rem;
     }
 
-    .contact-message {
-        padding-top: 1.5rem; /* Adjusted padding */
-        border-top: 1px solid var(--divider-color); /* Lighter border */
+    .contact-form-container {
+        padding: 1.5rem;
     }
 
     .about-image {
@@ -790,15 +800,15 @@ footer p {
 
     .experience-content {
         flex-direction: column;
-        padding: 1.2rem; /* Adjusted padding */
+        padding: 1.2rem;
     }
 
     .experience-companies {
         border-right: none;
-        border-bottom: 1px solid var(--divider-color); /* Lighter border */
+        border-bottom: 1px solid var(--divider-color);
         padding-right: 0;
-        padding-bottom: 0.8rem; /* Adjusted padding */
-        margin-bottom: 0.8rem; /* Adjusted margin */
+        padding-bottom: 0.8rem;
+        margin-bottom: 0.8rem;
         flex: none;
         width: 100%;
         display: flex;
@@ -809,7 +819,7 @@ footer p {
 
     .company-item {
         padding: 0.4rem 0.8rem;
-        border: 1px solid var(--divider-color); /* Lighter border */
+        border: 1px solid var(--divider-color);
         border-radius: 0.4rem;
     }
 
@@ -817,73 +827,9 @@ footer p {
         display: none;
     }
 
-    .contact-item a {
-        display: inline-block;
-        color: var(--text-color);
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-    .contact-message .btn {
-        margin-top: 0.8rem;
-        cursor: pointer;
-    }
-
     .project-technologies li {
         font-size: 0.7rem;
     }
-}
-
-.contact-form {
-    width: 100%;
-    max-width: 500px;
-    margin-top: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    text-align: left;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group label {
-    font-family: var(--body-font);
-    font-size: 1rem;
-    color: var(--light-text);
-    margin-bottom: 0.5rem;
-    font-weight: var(--font-weight-medium);
-}
-
-.form-group input,
-.form-group textarea {
-    padding: 0.9rem 1rem;
-    border-radius: 0.5rem;
-    border: 1px solid var(--divider-color);
-    background: var(--background); /* Light background for inputs */
-    color: var(--text-color);
-    font-family: var(--body-font);
-    font-size: 1rem;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.2); /* Soft primary color glow */
-}
-
-.form-group textarea {
-    resize: vertical; 
-    min-height: 120px;
-}
-
-.contact-form .btn.primary {
-    align-self: flex-start; 
-    margin-top: 1rem; 
 }
 
 /* Chatbot Widget Styles */
@@ -950,9 +896,6 @@ footer p {
 }
 #chatbot-close:hover {
   color: var(--button-primary-hover-bg);
-}
-#chatbot-header span {
-  margin-left: auto;
 }
 #chatbot-suggestions {
   display: flex;
@@ -1061,4 +1004,4 @@ footer p {
 #chatbot-send:hover {
   background: var(--button-primary-hover-bg);
   color: var(--card-bg);
-} 
+}
