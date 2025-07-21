@@ -129,10 +129,7 @@
             <div class="contact-form-container">
                 <h3>Send Me a Message</h3>
                 <p>Feel free to reach out to me directly via email or connect with me on socials!</p>
-                <form id="contactForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                    <!-- Web3Forms access key -->
-                    <input type="hidden" name="access_key" value="6b86b3d9-9dff-4fd3-a8ee-7127b473184f">
-                
+                <form id="contactForm" class="contact-form" action="contact.php" method="POST">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Your Name" required>
                     </div>
@@ -146,14 +143,9 @@
                         <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                     </div>
                 
-                    <button type="submit" class="btn primary">
-                        <i class="fas fa-paper-plane"></i> Send Message
-                    </button>
-                
-                    <div id="formSuccess" class="form-success-message" style="display: none;">
-                         Thank you! Your message has been sent successfully.
-                    </div>
+                    <button type="submit" class="btn primary">Send Message</button>
                 </form>
+                
                 
                 <div id="formSuccess" class="form-success-message" style="display: none;">
                     Thank you! Your message has been sent successfully.
