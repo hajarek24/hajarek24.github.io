@@ -8,6 +8,20 @@ document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
     });
 });
 
+
+document.querySelectorAll('a[href^="mailto:"]').forEach(emailLink => {
+  emailLink.addEventListener('click', function(e) {
+      
+      if (!this.closest('.nav-links')) {
+          return true;
+      }
+      
+      
+      window.location.href = this.href;
+      return false;
+  });
+});
+
 // Navbar background change on scroll
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');

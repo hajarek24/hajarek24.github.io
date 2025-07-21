@@ -117,6 +117,26 @@ body {
     box-shadow: none;
 }
 
+
+a[href^="mailto:"] {
+    pointer-events: auto;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.contact-item a, 
+.contact-message a.btn {
+    pointer-events: auto !important;
+    z-index: 10 !important;
+}
+
+
+.contact-message .btn {
+    pointer-events: auto;
+    z-index: 10;
+}
+
 .social-icons {
     display: flex;
     gap: 0.8rem; /* Space between icons */
