@@ -147,47 +147,12 @@
                 </form>
                 
                 
-                <div id="formSuccess" class="form-success-message" style="display: none;">
-                    Thank you! Your message has been sent successfully.
-                </div>
+                
             </div>
         </div>
     </div>
 </section>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const form = document.getElementById("contactForm");
-        const formSuccess = document.getElementById("formSuccess");
-    
-        form.addEventListener("submit", function (e) {
-            e.preventDefault();
-    
-            const formData = new FormData(form);
-    
-            fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                body: formData
-            })
-            .then(response => response.json())
-            .then(result => {
-                if (result.success) {
-                    formSuccess.style.display = "block";
-                    form.reset();
-                    setTimeout(() => {
-                        formSuccess.style.display = "none";
-                    }, 5000);
-                } else {
-                    alert("Something went wrong. Please try again.");
-                }
-            })
-            .catch(error => {
-                alert("There was a problem: " + error.message);
-            });
-        });
-    });
-    </script>
-    
 
     
 
