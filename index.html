@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Software Engineer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">ELKASIRI<br>Hajar</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="mailto:hajar.elkasiri3@gmail.com" aria-label="Email" class="social-icon"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/hajarek24" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hajar-elkasiri-711a202a1/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <button id="theme-toggle" class="theme-toggle-button" aria-label="Toggle light/dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section">
+        <div class="container">
+            <h1>Hi, I'm <span class="highlight">Hajar</span><span id="blinking-cursor"></span></h1>
+            <h2>I craft intelligent solutions.</h2>
+            <p>I'm a final-year software engineering student at ENSIAS, Rabat, Morocco.</p>
+            <p>My relentless passion lies in crafting innovative solutions and building impactful AI-driven software that pushes the boundaries of what's possible.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn primary"><i class="fas fa-envelope"></i> Let's connect!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content section-content-to-animate">
+                <div class="about-text">
+                    <p>I am a passionate AI software engineer with a strong foundation in both traditional software development and artificial intelligence. My expertise lies in creating intelligent, efficient, and scalable solutions that leverage the power of AI to solve complex problems.</p>
+                    <p>I enjoy working on challenging AI projects, from machine learning model development to implementing AI-driven features in software applications. I'm constantly learning and exploring new AI technologies to enhance my skills and create more impactful solutions.</p>
+                    <p>Here are some technologies I have been working with:</p>
+                    <ul class="skills-in-about">
+                        <li>Python</li>
+                        <li>Machine Learning</li>
+                        <li>AI/ML Concepts</li>
+                        <li>HTML & CSS</li>
+                        <li>JavaScript</li>
+                        <li>React & Angular</li>
+                        <li>Databases (SQL, MySQL)</li>
+                        <li>Cloud (Oracle)</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="IMG_1333.jpg" alt="Your Photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-content section-content-to-animate">
+                <div class="experience-companies">
+                    <div class="company-item active" data-target="cdg">
+                        <h3>CDG Prévoyance</h3>
+                    </div>
+                    <!-- Add more company items as needed -->
+                </div>
+                <div class="experience-details">
+                    <div id="cdg" class="job-details active">
+                        <h3>Software Engineer Intern @ <span class="highlight">CDG Prévoyance</span></h3>
+                        <p class="job-duration">July - August 2024</p>
+                        <ul>
+                            <li>Designed and developed an interactive system for evaluating programming skills in technical interviews.</li>
+                            <li>Implemented real-time validation for coding challenges to automate assessment and improve accuracy.</li>
+                            <li>Used Spring Boot and MySQL for the backend, and HTML, JavaScript, and CSS for the front-end interface.</li>
+                        </ul>
+                    </div>
+                    <!-- Add more job details as needed -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid section-content-to-animate">
+                <!-- Projects will be dynamically loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-content section-content-to-animate">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:hajar.elkasiri3@gmail.com">hajar.elkasiri3@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/hajarek24" target="_blank" rel="noopener noreferrer">github.com/hajarek24</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/hajar-elkasiri-711a202a1/" target="_blank" rel="noopener noreferrer">linkedin.com/in/hajar-elkasiri-711a202a1/</a>
+                    </div>
+                </div>
+                <div class="contact-message">
+                    <p>Feel free to reach out to me directly via email or connect with me on socials!</p>
+                    <a href="mailto:hajar.elkasiri3@gmail.com" class="btn primary">Send Me an Email</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Built and designed by ELKASIRI Hajar.<br>All rights reserved. &copy;</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- Chatbot Widget Start -->
+    <div id="chatbot-bubble" title="Chat with me!">
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png" alt="Chatbot" style="width:40px;height:40px;">
+    </div>
+    <div id="chatbot-window" style="display:none;">
+        <div id="chatbot-header">Alex <span id="chatbot-close">&times;</span></div>
+        <div id="chatbot-suggestions"></div>
+        <div id="chatbot-messages"></div>
+        <div id="chatbot-input-area">
+            <input type="text" id="chatbot-input" placeholder="Type your question..." autocomplete="off" />
+            <button id="chatbot-send" aria-label="Send"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    <!-- Chatbot Widget End -->
+</body>
+</html> 
