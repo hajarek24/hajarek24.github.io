@@ -346,40 +346,6 @@ document.addEventListener('DOMContentLoaded', function() {
     chatbotBubble.style.display = 'block';
   };
 
-  // Add this to your existing JavaScript (at the bottom before the closing })
-
-// Contact Form Handling
-const contactForm = document.getElementById('contactForm');
-const formSuccess = document.getElementById('formSuccess');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
-        
-        // Here you would normally send the form data to a server
-        // For this example, we'll just show a success message
-        console.log('Form submitted:', { name, email, subject, message });
-        
-        // Show success message
-        formSuccess.style.display = 'block';
-        contactForm.reset();
-        
-        // Hide success message after 5 seconds
-        setTimeout(() => {
-            formSuccess.style.display = 'none';
-        }, 5000);
-        
-      
-    });
-}
-
-// Make sure to remove any previous email link JavaScript that might interfere
 
   function handleSend() {
     const userText = chatbotInput.value.trim();
