@@ -73,43 +73,46 @@ projectCards.forEach(card => {
 
 // --- Dynamic Projects Loading ---
 const projects = [
+  {
+    title: "Space Gateway",
+    description: "A modern full-stack web application that brings the wonders of space exploration to your fingertips. It provides real-time data on planets, space missions, astronomical events, the latest space news, and high-resolution imagery — all powered by live APIs and wrapped in an engaging, responsive UI.",
+    // image: "https://via.placeholder.com/300x200?text=AI+Profile", // Image removed as per request
+    githubLink: "https://github.com/m-elhamlaoui/space-gateway.git", // Placeholder - Add your GitHub link here
+    demoLink: "#", 
+    technologies: ["React", "TypeScript", "Chakra UI", "Spring Boot", "Java", "Docker", "Kubernetes", "Jenkins", "Prometheus", "Grafana", "APIs: NASA, Space Devs, NewsAPI"]
+},
     {
         title: "AI-Driven Profile Identification System",
         description: "Developed an AI-powered web application for candidate selection, using BERT, TF-IDF, and cosine similarity for profile matching. Implemented a recommendation engine based on skills and experience.",
-        // image: "https://via.placeholder.com/300x200?text=AI+Profile", // Image removed as per request
-        githubLink: "#", // Placeholder - Add your GitHub link here
+        githubLink: "#",
         demoLink: "#", 
         technologies: ["BERT", "TF-IDF", "Cosine Similarity", "AI", "Recommendation Engine", "Web Application"]
     },
     {
         title: "Internship Management System",
         description: "Designed and developed a decentralized system using Oracle APEX and Oracle Database, following the Merise methodology. Integrated real-time internship offer management and applications, along with an interactive dashboard for statistical monitoring.",
-        // image: "https://via.placeholder.com/300x200?text=Internship+System", // Image removed as per request
-        githubLink: "#", // Placeholder - Add your GitHub link here
+        githubLink: "#",
         demoLink: "#",
         technologies: ["Oracle APEX", "Oracle Database", "Merise Methodology", "Decentralized System"]
     },
     {
         title: "Compiler and Interpreter Development",
         description: "Designed a compiler with lexical, syntax, and semantic analysis, including a token-based parser and P-code interpretation.",
-        // image: "https://via.placeholder.com/300x200?text=Compiler+Interpreter", // Image removed as per request
-        githubLink: "#", // Placeholder - Add your GitHub link here
+        githubLink: "#",
         demoLink: "#",
         technologies: ["Compiler Design", "Lexical Analysis", "Syntax Analysis", "Semantic Analysis", "P-code Interpretation"]
     },
     {
         title: "Cosmetic Product Property Prediction",
         description: "Developed a machine learning model to predict cosmetic product properties based on their ingredients, using multi-label classification algorithms and an interactive user interface.",
-        // image: "https://via.placeholder.com/300x200?text=Cosmetic+Prediction", // Image removed as per request
-        githubLink: "#", // Placeholder - Add your GitHub link here
+        githubLink: "https://github.com/hajarek24/Cosmetic-Ingredient-Property-Predictor.git", 
         demoLink: "#",
         technologies: ["Machine Learning", "Multi-label Classification", "User Interface", "Cosmetics"]
     },
     {
         title: "Facial Emotion Recognition",
         description: "Built an interactive web application to detect human emotions from facial images, using deep learning and computer vision techniques with convolutional neural networks (CNNs).",
-        // image: "https://via.placeholder.com/300x200?text=Emotion+Recognition", // Image removed as per request
-        githubLink: "#", // Placeholder - Add your GitHub link here
+        githubLink: "https://github.com/hajarek24/facial-emotions-recognition.git",
         demoLink: "#",
         technologies: ["Deep Learning", "Computer Vision", "CNNs", "Web Application", "Emotion Recognition"]
     }
@@ -117,15 +120,13 @@ const projects = [
 
 function loadProjects() {
     const projectsGrid = document.querySelector('.projects-grid');
-    if (!projectsGrid) return; // Exit if grid not found
-
-    // Clear existing projects if any (useful if calling multiple times)
+    if (!projectsGrid) return;
     projectsGrid.innerHTML = ''; 
 
     projects.forEach(project => {
         const projectCard = document.createElement('div');
         projectCard.classList.add('project-card');
-        projectCard.classList.add('section-content-to-animate'); // For animation on scroll
+        projectCard.classList.add('section-content-to-animate');
 
         projectCard.innerHTML = `
             <div class="project-header-icons">
@@ -142,30 +143,26 @@ function loadProjects() {
         projectsGrid.appendChild(projectCard);
     });
 
-    // Re-observe newly added project cards for animation
     const newProjectCards = document.querySelectorAll('.projects-grid .project-card');
     newProjectCards.forEach(card => {
         sectionObserver.observe(card);
     });
 }
 
-// Call loadProjects when the DOM is fully loaded
+
 document.addEventListener('DOMContentLoaded', loadProjects);
 
-// Experience section interactivity
+
 const companyItems = document.querySelectorAll('.company-item');
 const jobDetails = document.querySelectorAll('.job-details');
 
 companyItems.forEach(item => {
     item.addEventListener('click', function() {
-        // Remove active class from all company items and job details
         companyItems.forEach(c => c.classList.remove('active'));
         jobDetails.forEach(j => j.classList.remove('active'));
 
-        // Add active class to clicked company item
         this.classList.add('active');
 
-        // Show corresponding job details
         const targetId = this.dataset.target;
         document.getElementById(targetId).classList.add('active');
     });
@@ -185,7 +182,7 @@ if (savedTheme) {
         themeToggle.querySelector('i').classList.replace('fa-sun', 'fa-moon');
     }
 } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    // If no theme saved, check user's system preference
+   
     body.classList.add('dark-mode');
     themeToggle.querySelector('i').classList.replace('fa-moon', 'fa-sun');
 }
@@ -242,13 +239,13 @@ document.addEventListener('DOMContentLoaded', function() {
         chatbotSuggestions.appendChild(btn);
       });
     } else if (afterMsg) {
-      // Remove any previous inline suggestions
+      
       const oldInline = document.querySelector('.chatbot-suggestions-inline');
       if (oldInline) oldInline.remove();
-      // Remove the just-used suggestion
+     
       remainingSuggestions = remainingSuggestions.filter(q => q !== afterMsg);
       if (remainingSuggestions.length === 0) return;
-      // Render remaining suggestions under the answer
+      
       const container = document.createElement('div');
       container.className = 'chatbot-suggestions-inline';
       container.style.marginTop = '8px';
@@ -336,7 +333,7 @@ document.addEventListener('DOMContentLoaded', function() {
   chatbotBubble.onclick = () => {
     chatbotWindow.style.display = 'flex';
     chatbotBubble.style.display = 'none';
-    // Show welcome message if chat is empty
+    
     if (chatbotMessages.childElementCount === 0) {
       addMessage('Bot', "Hi! I'm Alex, Hajar's little bot. You can ask me about Hajar's skills, experience, education, or anything about her.");
     }
@@ -380,10 +377,10 @@ document.addEventListener('DOMContentLoaded', function() {
         headers: { 'Accept': 'application/json' }
       });
       if (response.ok) {
-        alert('✅ Message sent successfully!');
+        alert('Message sent successfully!');
         form.reset();
       } else {
-        alert('❌ Failed to send message. Please try again.');
+        alert('Failed to send message. Please try again.');
       }
     });
   }
