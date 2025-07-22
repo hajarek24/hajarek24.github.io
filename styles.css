@@ -35,12 +35,12 @@
 
 .dark-mode {
     --background: #111111; /* Very dark background, almost black */
-    --primary-color: #64FFDA; /* Keep teal accent for highlights */
+    --primary-color: #E63946; /* Keep teal accent for highlights */
     --text-color: #FFFFFF; /* White text */
     --light-text: #B0B0B0; /* Light grey for muted text */
     --card-bg: #1A1A1A; /* Slightly lighter than background for cards */
     --divider-color: #333333; /* Darker grey for subtle lines */
-    --button-primary-hover-bg: #00BFA6; /* Keep teal hover */
+    --button-primary-hover-bg: #E63946; /* Keep teal hover */
 }
 
 html {
