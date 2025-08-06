@@ -832,8 +832,8 @@ footer p {
     }
 }
 
-/* Chatbot Widget Styles */
-#chatbot-bubble {
+/* Chatbot Widget Styles
+chatbot-bubble {
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -1004,4 +1004,4 @@ footer p {
 #chatbot-send:hover {
   background: var(--button-primary-hover-bg);
   color: var(--card-bg);
-}
+}*/
