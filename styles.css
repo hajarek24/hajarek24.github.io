@@ -846,3 +846,59 @@ footer p {
         font-size: 0.7rem;
     }
 }
+
+.about-terminal {
+    flex-shrink: 0;
+    width: 320px;
+    background: #1e1e1e;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--divider-color);
+    font-family: var(--code-font);
+}
+
+.terminal-header {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.7rem 1rem;
+    background: #2d2d2d;
+    border-bottom: 1px solid #3a3a3a;
+}
+
+.dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+
+.terminal-title {
+    margin-left: 0.6rem;
+    color: #999;
+    font-size: 0.8rem;
+}
+
+.terminal-body {
+    margin: 0;
+    padding: 1.4rem 1.2rem;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: #e6e6e6;
+    overflow-x: auto;
+}
+
+.terminal-body .kw   { color: #c586c0; }  /* const */
+.terminal-body .key  { color: #9cdcfe; }  /* property names */
+.terminal-body .str  { color: #ce9178; }  /* string values */
+
+@media (max-width: 768px) {
+    .about-terminal {
+        width: 100%;
+        max-width: 320px;
+    }
+}
