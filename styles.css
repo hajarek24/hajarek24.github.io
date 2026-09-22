@@ -101,6 +101,33 @@ textarea:focus-visible {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.logo-mark {
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+}
+
+.logo-mark-line {
+    stroke: var(--text-color);
+    stroke-width: 6;
+    stroke-linecap: round;
+    transition: stroke 0.3s ease;
+}
+
+.logo-mark-dot-a {
+    fill: var(--primary-color);
+}
+
+.logo-mark-dot-b {
+    fill: var(--accent-secondary);
+}
+
+.logo-text {
     font-family: var(--header-font);
     font-size: 1.3rem;
     font-weight: var(--font-weight-bold);
